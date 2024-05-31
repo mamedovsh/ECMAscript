@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.body {
+  background-color: grey;
+}
+.dogImageContainer {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.figure {
+  border: thin #c0c0c0 solid;
+  display: flex;
+  flex-flow: column;
+  padding: 5px;
+  margin: auto;
+  min-height: 700px;
+  width: 360px;
+}
+
+.img {
+  max-width: 360px;
+  max-height: 360px;
+  object-fit: cover;
+}
+
+.figcaption {
+  background-color: #222;
+  color: #fff;
+  font: italic smaller sans-serif;
+  padding: 3px;
+  text-align: center;
+}

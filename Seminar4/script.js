@@ -33,3 +33,23 @@
 // Необходимо реализовать отрисовку 10 картинок 
 // собак из API https://dog.ceo/dog-api/ с интервалом в 3 секунды.
 
+
+
+function fetchDogImages() {
+    fetch('https://dog.ceo/api/breeds/image/random/10')
+      .then(response => response.json())
+      .then(data => {
+        data.message.forEach((image, index) => {
+          const img = document.createElement('img');
+          img.src = image;
+          document.body.appendChild(img);
+        });
+      })
+      .catch(error => console.log(error));
+  }
+  
+  function displayDogImages() {
+    setInterval(fetchDogImages, 3000);
+  }
+  
+  displayDogImages();
